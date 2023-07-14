@@ -1,4 +1,4 @@
-# Single and Multi Speaker Cloned Voice Detection: From Perceptual to Learned Features
+# Single- and Multi-Speaker Cloned Voice Detection: From Perceptual to Learned Features
 
 <!-- Add link to license on github and decide which license, check python version for accuracy -->
 [![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://github.com/audio-df-ucb/ClonedVoiceDetection/blob/main/LICENSE)
@@ -20,30 +20,30 @@ The repository is structured as follows:
 | Folder    | File       | Description                                       |
 |-----------|------------|---------------------------------------------------|
 |__Experiment Pipeline__|
-| `/src/`   |`run_pipeline_ljspeech.py`| Runs the pipeline for single voice (LJSpeech) experiments|
-| `/src/`   |`run_pipeline_multivoice.py`| Runs the pipeline for multivoice experiments|
-| `/src/packages/`  | `ExperimentPipeline.py`     | Class for running the experiment_pipeline and logging results|
-| `/src/packages/`  | `ModelManager.py`            |Class for managing the final classification models |
+| `/src/`   |[`run_pipeline_ljspeech.py`](https://github.com/audio-df-ucb/ClonedVoiceDetection/blob/main/src/run_pipeline_ljspeech.py)| Runs the pipeline for single voice (LJSpeech) experiments|
+| `/src/`   |[`run_pipeline_multivoice.py`](https://github.com/audio-df-ucb/ClonedVoiceDetection/blob/main/src/run_pipeline_multivoice.py)| Runs the pipeline for multivoice experiments|
+| `/src/packages/`  | [`ExperimentPipeline.py`](https://github.com/audio-df-ucb/ClonedVoiceDetection/blob/main/src/packages/ExperimentPipeline.py)     | Class for running the experiment_pipeline and logging results|
+| `/src/packages/`  | [`ModelManager.py`](https://github.com/audio-df-ucb/ClonedVoiceDetection/blob/main/src/packages/ModelManager.py)            |Class for managing the final classification models |
 |__Feature Generation__|
-| `/src/packages/`  | `AudioEmbeddingsManager.py`  | Class for managing learned features generated using [NVIDIA TitaNet](https://docs.nvidia.com/deeplearning/nemo/user-guide/docs/en/stable/asr/speaker_recognition/models.html)|
-| `/src/packages/`  | `SmileFeatureManager.py`     | Class for managing spectral features generated using [openSMILE](https://audeering.github.io/opensmile-python/usage.html)|
-| `/src/packages/`  | `SmileFeatureGenerator.py`   | Class for generating spectral features and saving to disk for collections of audio files|
-| `/src/packages/`  | `SmileFeatureSelector.py`    | Class for selecting spectral features using `sklearn.feature_selection` |
-| `/src/packages/`  | `CadenceModelManager.py`     | Class for managing perceptual features generated using handcrafted technqiues|
-| `/src/packages/`  | `CadenceUtils.py`            | Utility functions used by `CadenceModelManager` for generating features |
-| `/src/packages/`  | `BayesSearch.py`             | A class that implements Bayesian Hyperparameter Optimization for perceptual model |
-| `/src/packages/`  | `SavedFeatureLoader.py`      | Helper function for loading during experiments the generated features saved to disk|
+| `/src/packages/`  | [`AudioEmbeddingsManager.py`](https://github.com/audio-df-ucb/ClonedVoiceDetection/blob/main/src/packages/AudioEmbeddingsManager.py)  | Class for managing learned features generated using [NVIDIA TitaNet](https://docs.nvidia.com/deeplearning/nemo/user-guide/docs/en/stable/asr/speaker_recognition/models.html)|
+| `/src/packages/`  | [`SmileFeatureManager.py`](https://github.com/audio-df-ucb/ClonedVoiceDetection/blob/main/src/packages/SmileFeatureManager.py)     | Class for managing spectral features generated using [openSMILE](https://audeering.github.io/opensmile-python/usage.html)|
+| `/src/packages/`  | [`SmileFeatureGenerator.py`](https://github.com/audio-df-ucb/ClonedVoiceDetection/blob/main/src/packages/SmileFeatureGenerator.py)   | Class for generating spectral features and saving to disk for collections of audio files|
+| `/src/packages/`  | [`SmileFeatureSelector.py`](https://github.com/audio-df-ucb/ClonedVoiceDetection/blob/main/src/packages/SmileFeatureSelector.py)    | Class for selecting spectral features using `sklearn.feature_selection` |
+| `/src/packages/`  | [`CadenceModelManager.py`](https://github.com/audio-df-ucb/ClonedVoiceDetection/blob/main/src/packages/CadenceModelManager.py)     | Class for managing perceptual features generated using handcrafted technqiues|
+| `/src/packages/`  | [`CadenceUtils.py`](https://github.com/audio-df-ucb/ClonedVoiceDetection/blob/main/src/packages/CadenceUtils.py)            | Utility functions used by `CadenceModelManager` for generating features |
+| `/src/packages/`  | [`BayesSearch.py`](https://github.com/audio-df-ucb/ClonedVoiceDetection/blob/main/src/packages/BayesSearch.py)             | A class that implements Bayesian Hyperparameter Optimization for perceptual model |
+| `/src/packages/`  | [`SavedFeatureLoader.py`](https://github.com/audio-df-ucb/ClonedVoiceDetection/blob/main/src/packages/SavedFeatureLoader.py)      | Helper function for loading during experiments the generated features saved to disk|
 |__Data Loaders__|
-| `/src/packages/`  | `LJDataLoader.py`            | Class for loading and handling the LJSpeech data for experiments|
-| `/src/packages/`  | `TIMITDataLoader.py`         | Class for loading and handling the TIMIT data for multivoice experiments|
+| `/src/packages/`  | [`LJDataLoader.py`](https://github.com/audio-df-ucb/ClonedVoiceDetection/blob/main/src/packages/LJDataLoader.py)            | Class for loading and handling the LJSpeech data for experiments|
+| `/src/packages/`  | [`TIMITDataLoader.py`](https://github.com/audio-df-ucb/ClonedVoiceDetection/blob/main/src/packages/TIMITDataLoader.py)         | Class for loading and handling the TIMIT data for multi-voice experiments|
 |__Data Generation__|
-| `/src/packages/`  | `BaseDeepFakeGenerator.py`   | Base class used for processing data used for voice cloning |
-| `/src/packages/`  | `ElevenLabsDeepFakeGenerator.py`| Class used to generate deepfakes using the ElevenLabs API |
-| `/src/packages/`  | `AudioManager.py`            | Class for resampling audio files and performing adversarial laundering |
+| `/src/packages/`  | [`BaseDeepFakeGenerator.py`](https://github.com/audio-df-ucb/ClonedVoiceDetection/blob/main/src/packages/BaseDeepFakeGenerator.py)   | Base class used for processing data used for voice cloning |
+| `/src/packages/`  | [`ElevenLabsDeepFakeGenerator.py`](https://github.com/audio-df-ucb/ClonedVoiceDetection/blob/main/src/packages/ElevenLabsDeepFakeGenerator.py)| Class used to generate deepfakes using the ElevenLabs API |
+| `/src/packages/`  | [`AudioManager.py`](https://github.com/audio-df-ucb/ClonedVoiceDetection/blob/main/src/packages/AudioManager.py)            | Class for resampling audio files and performing adversarial laundering |
 |__Misc__|
-| `.`       | `README.md` | Provides an overview for the project|
-| `.`       | `conda_requirements.txt` | Dependencies for creating the `conda` environment|
-| `.`       | `pip_requirements.txt` | Dependencies installed with `pip`|
+| `.`       | [`README.md`]() | Provides an overview for the project|
+| `.`       | [`conda_requirements.txt`]() | Dependencies for creating the `conda` environment|
+| `.`       | [`pip_requirements.txt`]() | Dependencies installed with `pip`|
 
 # Data
 
@@ -131,7 +131,6 @@ Accuracies for a non-personalized, multi-speaker classification of unlaundered a
 | **Dataset**  | **Model**  | **Learned**  | **Spectral** | **Perceptual** | **Learned**  | **Spectral** | **Perceptual** | **Learned**  | **Spectral** | **Perceptual** |
 | EL       | single (L)  | 100.0 | 94.2 | 83.8 | 99.9 | 98.3 | 86.9 | 0.0 | 3.0 | 1.3 |
 |          | single (NL) | 92.3 | 96.3 | 82.2 | 100.0 | 99.7 | 87.7 | 0.1 | 1.6 | 1.4 |
-
 
 
 # Research Group
