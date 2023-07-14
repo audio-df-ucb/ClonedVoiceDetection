@@ -1,13 +1,17 @@
 # Single and Multi Speaker Cloned Voice Detection: From Perceptual to Learned Features
 
 <!-- Add link to license on github and decide which license, check python version for accuracy -->
-[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
+[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://github.com/audio-df-ucb/ClonedVoiceDetection/blob/main/LICENSE)
 [![Python 3.8.0](https://img.shields.io/badge/python-3.8.0-blue.svg)](https://www.python.org/downloads/release/python-380/)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)  
 
-This is the repository for the following paper: [Single and Multi Speaker Cloned Voice Detection: From Perceptual to Learned Features](). 
+This is the repository for the paper titled [Single and Multi Speaker Cloned Voice Detection: From Perceptual to Learned Features]() submitted to the 2023 IEEE International Workshop on Information Forensics and Security (WIFS 2023).
 
-At present, only the code relevant to the execution of the single-speaker and multi-speaker pipelines is provided. Please note that only part of the specific dataset utilized in our experiments is publicly accessible. An analogous dataset with voice clones can be constructed using various voice cloning architectures/providers. Features need to be generated and saved to disk and the relevant data handling code in the pipeline needs to be modified for the pipeline to run on the new data.
+The provided source code includes implementations of both the single-speaker and multi-speaker pipelines. However, please note that the dataset used in the experiments is not included in this repository. To replicate the experiments, you would need to create an analogous experimental dataset with cloned voices using different voice cloning architectures or providers.
+
+The repository does provide code for data generation and adversarial laundering, specifically tailored for an example provider called ElevenLabs. You would need to generate features from the analogous dataset and save them to disk. Additionally, you will need to modify the relevant data handling code to ensure compatibility with your new dataset in order to run the pipeline successfully.
+
+Please refer to the repository and the paper for more detailed instructions on how to use the code and conduct the experiments.
 
 # Folder Structure
 
@@ -76,7 +80,7 @@ An overview of the real and synthetic datasets used in our single-speaker (top) 
 
 ### Single-speaker
 
-Accuracy for a personalized, single-speaker classification of unlaundered audio (top) and audio subject to adversarial laundering in the form of additive noise and transcoding (bottom). Dataset corresponds to ElevenLabs (EL), UberDuck (UD), and WaveFake (WF); Model corresponds to a linear (L) or non-linear (NL) classifier, and for a single-classifier (real v. synthetic) or multi-classifier (real vs. specific synthethis architecture); accuracy (%) is reported for synthetic audio, real audio, and (for the single-classifiers) equal error rate (EER) is also reported.
+Accuracies for a personalized, single-speaker classification of unlaundered audio (top) and audio subject to adversarial laundering in the form of additive noise and transcoding (bottom). Dataset corresponds to ElevenLabs (EL), UberDuck (UD), and WaveFake (WF); Model corresponds to a linear (L) or non-linear (NL) classifier, and for a single-classifier (real v. synthetic) or multi-classifier (real vs. specific synthethis architecture); accuracy (%) is reported for synthetic audio, real audio, and (for the single-classifiers) equal error rate (EER) is also reported.
 
 
 |          |        | Synthetic Accuracy (%) |     |     | Real Accuracy (%) |     |     | EER (%) |     |     |
@@ -119,7 +123,7 @@ Accuracy for a personalized, single-speaker classification of unlaundered audio 
 
 ### Multi-speaker
 
-Accuracy for a non-personalized, multi-speaker classification of unlaundered audio. Dataset corresponds to ElevenLabs (EL); Model corresponds to a linear (L) or non-linear (NL) classifier, and for a single-classifier (real v. synthetic) or multi-classifier (real vs. specific synthethis architecture); accuracy (%) is reported for synthetic audio, real audio, and (for the single-classifiers) equal error rate (EER) is also reported.
+Accuracies for a non-personalized, multi-speaker classification of unlaundered audio. Dataset corresponds to ElevenLabs (EL); Model corresponds to a linear (L) or non-linear (NL) classifier, and for a single-classifier (real v. synthetic) or multi-classifier (real vs. specific synthethis architecture); accuracy (%) is reported for synthetic audio, real audio, and (for the single-classifiers) equal error rate (EER) is also reported.
 
 |          |        | Synthetic Accuracy (%) |     |     | Real Accuracy (%) |     |     | EER (%) |     |     |
 |----------|--------|:----------------------:|-----|-----|:-----------------:|-----|-----|:-------:|-----|-----|
