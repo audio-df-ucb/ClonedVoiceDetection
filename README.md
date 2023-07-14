@@ -88,7 +88,7 @@ Accuracies for a personalized, single-speaker classification of unlaundered audi
 | **Dataset**  | **Model**  | **Learned**  | **Spectral** | **Perceptual** | **Learned**  | **Spectral** | **Perceptual** | **Learned**  | **Spectral** | **Perceptual** |
 |__Unlaundered__|
 |Binary|
-| EL       | single (L)  | 100.0 | 99.2 | 77.2 | 100.0 | 99.9 | 72.5 | 0.0 | 0.5 | 24.9 |
+| EL       | single (L)  | 100.0 | 99.2 | 78.2 | 100.0 | 99.9 | 72.5 | 0.0 | 0.5 | 24.9 |
 |          | single (NL) | 100.0 | 99.9 | 82.2 | 100.0 | 100.0 | 80.4 | 0.0 | 0.1 | 18.6 |
 | UD       | single (L) | 99.8 | 98.9 | 51.9 | 99.9 | 98.9 | 54.0 | 0.1 | 1.1 | 47.2 |
 |          | single (NL) | 99.7 | 99.2 | 54.4 | 99.9 | 99.0 | 56.5 | 0.2 | 0.9 | 44.5 |
@@ -125,6 +125,7 @@ Accuracies for a personalized, single-speaker classification of unlaundered audi
 
 Accuracies for a non-personalized, multi-speaker classification of unlaundered audio. Dataset corresponds to ElevenLabs (EL); Model corresponds to a linear (L) or non-linear (NL) classifier, and for a single-classifier (real v. synthetic) or multi-classifier (real vs. specific synthethis architecture); accuracy (%) is reported for synthetic audio, real audio, and (for the single-classifiers) equal error rate (EER) is also reported.
 
+
 |          |        | Synthetic Accuracy (%) |     |     | Real Accuracy (%) |     |     | EER (%) |     |     |
 |----------|--------|:----------------------:|-----|-----|:-----------------:|-----|-----|:-------:|-----|-----|
 | **Dataset**  | **Model**  | **Learned**  | **Spectral** | **Perceptual** | **Learned**  | **Spectral** | **Perceptual** | **Learned**  | **Spectral** | **Perceptual** |
@@ -141,6 +142,8 @@ Accuracies for a non-personalized, multi-speaker classification of unlaundered a
 * Hany Farid<sup>1,2</sup> -- <hfarid@berkeley.edu> 
 
 School of Information<sup>1</sup> and Electrical Engineering and Computer Sciences<sup>1,2</sup> at the University of California, Berkeley
+
+This work was partially funded by a [grant from the UC Berkeley Center For Long-Term Cybersecurity (CLTC)](https://cltc.berkeley.edu/publication/digital-fingerprinting-to-protect-against-deepfakes/), an [award for open-source innovation from the Digital Public Goods Alliance and United Nations Development Program](https://digitalpublicgoods.net/information-pollution/), and an unrestricted gift from Meta. 
 
 # Citation
 
