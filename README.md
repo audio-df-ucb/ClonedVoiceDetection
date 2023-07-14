@@ -41,9 +41,9 @@ The repository is structured as follows:
 | `/src/packages/`  | [`ElevenLabsDeepFakeGenerator.py`](https://github.com/audio-df-ucb/ClonedVoiceDetection/blob/main/src/packages/ElevenLabsDeepFakeGenerator.py)| Class used to generate deepfakes using the ElevenLabs API |
 | `/src/packages/`  | [`AudioManager.py`](https://github.com/audio-df-ucb/ClonedVoiceDetection/blob/main/src/packages/AudioManager.py)            | Class for resampling audio files and performing adversarial laundering |
 |__Misc__|
-| `.`       | [`README.md`]() | Provides an overview for the project|
-| `.`       | [`conda_requirements.txt`]() | Dependencies for creating the `conda` environment|
-| `.`       | [`pip_requirements.txt`]() | Dependencies installed with `pip`|
+| `.`       | [`README.md`](https://github.com/audio-df-ucb/ClonedVoiceDetection/blob/main/README.md) | Provides an overview for the project|
+| `.`       | [`conda_requirements.txt`](https://github.com/audio-df-ucb/ClonedVoiceDetection/blob/main/conda_requirements.txt) | Dependencies for creating the `conda` environment|
+| `.`       | [`pip_requirements.txt`](https://github.com/audio-df-ucb/ClonedVoiceDetection/blob/main/pip_requirements.txt) | Dependencies installed with `pip`|
 
 # Data
 
