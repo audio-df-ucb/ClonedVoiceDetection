@@ -63,7 +63,7 @@ An overview of the real and synthetic datasets used in our single-speaker (top) 
 | **Type** | **Name** | **Clips (#)** | **Duration (sec)** |
 |:--------:|:--------:|:-------------:|:------------------:|
 | Real | TIMIT | 4,620 | 14,192 |
-| Synthetic | ElevenLabs | 91,700 | 603,081 |
+| Synthetic | ElevenLabs | 5,499 | 15,413 |
 
 ### Publicly Available Data
 
