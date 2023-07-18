@@ -5,7 +5,7 @@
 [![Python 3.8.0](https://img.shields.io/badge/python-3.8.0-blue.svg)](https://www.python.org/downloads/release/python-380/)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)  
 
-This is the repository for the paper titled [Single and Multi Speaker Cloned Voice Detection: From Perceptual to Learned Features]() submitted to the 2023 IEEE International Workshop on Information Forensics and Security (WIFS 2023).
+This is the repository for the paper titled [Single and Multi Speaker Cloned Voice Detection: From Perceptual to Learned Features](https://arxiv.org/abs/2307.07683) submitted to the 2023 IEEE International Workshop on Information Forensics and Security (WIFS 2023).
 
 The provided source code includes implementations of both the single-speaker and multi-speaker pipelines. However, please note that the dataset used in the experiments is not included in this repository. To replicate the experiments, you would need to create an analogous experimental dataset with cloned voices using different voice cloning architectures or providers.
 
@@ -146,8 +146,15 @@ This work was partially funded by a [grant from the UC Berkeley Center For Long-
 
 # Citation
 
-Please cite this repository as follows if you use the code:
+Please cite the following paper if you use this code:
 
 ```
-TBD
+@misc{barrington2023single,
+      title={Single and Multi-Speaker Cloned Voice Detection: From Perceptual to Learned Features}, 
+      author={Sarah Barrington and Romit Barua and Gautham Koorma and Hany Farid},
+      year={2023},
+      eprint={2307.07683},
+      archivePrefix={arXiv},
+      primaryClass={cs.SD}
+}
 ```
